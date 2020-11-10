@@ -2,6 +2,10 @@
 
 ### A smart house for selective feeding of native species and bird monitoring. 
 
+This project was created as a part of the [3Ai](https://3ainstitute.org/) masters program at the Australian National University, where we study the development of safe, sustainable and responsible AI-enabled cyberphysical systems. 
+
+Our aim is to create a project that can bring humans closer to nature, enable safe bird feeding through selective, non-invasive species feeding and promote involvement in citizen science and generate data on urban birds. 
+
 To run the project, you will need: 
 
 - Raspberry Pi 3
@@ -55,9 +59,11 @@ Our project extends it in several ways.
 
 - We use a Raspberry Pi instead of a Coral. 
 
-#### A new branch of engineering
+#### Other use cases
 
-This project was created as a part of the 3Ai masters program at the Australian National University, where we study the development of safe, sustainable and responsible AI-enabled cyberphysical systems. You can find more about 3Ai [here](https://3ainstitute.org/)
+This system can be used by conservation and research teams to enable AI enabled bird monitoring. The model can also be changed for identifying other animals, and enabled selective feeding of vulnerable species. To do this, you can find more models [here](https://coral.ai/models/), or train your own, and just the --model parameter. 
+
+
 
 
 
