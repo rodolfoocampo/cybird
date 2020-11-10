@@ -14,7 +14,7 @@ To run the project, you will need:
 - A food dispenser mechanism that can be controlled by a servo
 - A house. Our model has used the model found [here](https://coral.ai/projects/bird-feeder/#recommended-electronics)
 
-### Steps 
+### Steps to build your own 
 
 #### Software
 
@@ -47,7 +47,7 @@ python3 classify_image.py --model models/mobilenet_v2_1.0_224_inat_bird_quant_ed
 ```
 
 
-#### Inspiration for the project 
+### Inspiration for the project 
 
 This project is based on the smart bird feeder created by the Coral team, [found here](https://coral.ai/projects/bird-feeder/#how-it-works)
 
@@ -59,7 +59,7 @@ Our project extends it in several ways.
 
 - We use a Raspberry Pi instead of a Coral. 
 
-#### Other use cases
+### Other use cases
 
 This system can be used by conservation and research teams to enable AI enabled bird monitoring. The model can also be changed for identifying other animals, and enabled selective feeding of vulnerable species. To do this, you can find more models [here](https://coral.ai/models/), or train your own, and just the --model parameter. 
 
