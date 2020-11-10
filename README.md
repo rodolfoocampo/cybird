@@ -28,24 +28,40 @@ To run the project, you will need:
 #### Mechanical Components
 
 1. Connect your servo to pin 17 in the Raspberry Pi.
-2. Attach your servo to the opening operator of the feeding mechanism. The servo will open less than 30 degrees. This can be adjusted changing the duty cycle in found in classify_image.py
+2. Attach your servo to the opening operator of the feeding mechanism. The servo will open less than 30 degrees. This can be adjusted changing the duty cycle found in classify_image.py
 
 #### Selective feeding and monitoring
 
-1. Create a google sheet. Grab the Google Sheet Id. https://docs.google.com/spreadsheets/d/{youwillfindtheidhere}
+1. Create a google sheet. 
 
-2. Create four sheets in your Google Sheet. Don't change their names. In the Sheet4, in the A2 cell, write the name of the bird you want to feed as found in the models/nat_bird_labels.txt
+2. Grab the Google Sheet Id. It is found after the d in sheet link https://docs.google.com/spreadsheets/d/{youwillfindtheidhere}. 
 
-3. If you want a dashboard, you can copy our original one [here](https://datastudio.google.com/u/0/reporting/ddfa43c1-f1eb-4a55-895f-63411924b9e3/page/SrtnB) and just set your Google Sheet as a Data Source. Or you can create your own, fed with the Google Sheet you made. 
+Add this id in the read_selected_bird() function found in classify_image.py
+
+```
+def read_selected_bird(service):
+  result = service.spreadsheets().values().get(
+    spreadsheetId='1F0qtrtRo28imVHNk1VMyq1dgCAik6sc5HpivjDEci4E', range='Sheet4!A2').execute()
+  rows = result.get('values', [])
+  name = rows[0][0]
+  return name
+ ```
+
+3. Create four sheets in your Google Sheet. Don't change their names. In the Sheet4, in the A2 cell, write the name of the bird you want to feed as found in the models/nat_bird_labels.txt
+
+4. Enable the Google Sheets API. Download the pickle and credentials.json files.
+
+4. If you want a dashboard, you can copy our original one [here](https://datastudio.google.com/u/0/reporting/ddfa43c1-f1eb-4a55-895f-63411924b9e3/page/SrtnB) and just set your Google Sheet as a Data Source. Or you can create your own, fed with the Google Sheet you made. 
 
 #### Running the code
 
-To run the code, follow the steps above, clone this repo, and run: 
+Once you have done the above, clone this repo, and run: 
 
 ```
 python3 classify_image.py --model models/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite --labels models/inat_bird_labels.txt
 ```
 
+This will start taking a photo every second. It will record an observation in your Google Sheet. 
 
 ### Inspiration for the project 
 
