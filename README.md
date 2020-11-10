@@ -20,3 +20,10 @@ Included control of a servo
 Upload the data to a Google Sheet
 The Google Sheet can feed a dashboard like the one shown here: https://datastudio.google.com/u/0/reporting/ddfa43c1-f1eb-4a55-895f-63411924b9e3/page/SrtnB
 Gets information from Weather and Air Quality to aid research for understanding their effects on birds
+
+To run the code, follow the steps above, clone this repo, and run: 
+
+```
+python3 classify_image.py --model models/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite --labels models/inat_bird_labels.txt
+
+```
