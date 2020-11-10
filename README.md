@@ -12,7 +12,7 @@ To run the project, you will need:
 - Edge TPU
 - Servo Motor
 - A food dispenser mechanism that can be controlled by a servo
-- A house. Our model has used the model found here: https://coral.ai/projects/bird-feeder/#recommended-electronics
+- A house. Our model has used the model found [here](https://coral.ai/projects/bird-feeder/#recommended-electronics)
 
 ### Steps 
 
