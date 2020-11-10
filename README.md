@@ -41,7 +41,7 @@ Add this id in the read_selected_bird() function found in classify_image.py
 ```
 def read_selected_bird(service):
   result = service.spreadsheets().values().get(
-    spreadsheetId='1F0qtrtRo28imVHNk1VMyq1dgCAik6sc5HpivjDEci4E', range='Sheet4!A2').execute()
+    spreadsheetId='id_goes_here', range='Sheet4!A2').execute()
   rows = result.get('values', [])
   name = rows[0][0]
   return name
