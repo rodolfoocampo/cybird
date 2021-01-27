@@ -2,11 +2,13 @@
 
 ### A smart house for selective feeding of native species and bird monitoring. 
 
-This project was created as a part of the [3Ai](https://3ainstitute.org/) masters program at the Australian National University, where we study the development of safe, sustainable and responsible AI-enabled cyberphysical systems. 
+This bird house uses a mechanical bird feeder connected to an AI-enabled camera that detects and classifies birds, and feeds only selected species. It also records observations and provides an interactive data dashboard of bird visits. 
 
-Our aim is to create a project that can bring humans closer to nature, enable safe bird feeding through selective, non-invasive species feeding and promote involvement in citizen science to generate data on urban birds. 
+The project was created as a part of the [3Ai](https://3ainstitute.org/) masters program at the Australian National University, and is an extension of the Smart Bird Feeder by Google Coral. At [3Ai](https://3ainstitute.org/) we study how to develop safe, sustainable and responsible AI-enabled cyberphysical systems, and this we built this project as a way to explore those questions within the environmental cyberphysical systems space. 
 
-To run the project, you will need: 
+The aim of the system to bring humans closer to wildlife in their backyard and gather data on urban bird populations by engaging people on citizen science.
+
+To replicate this project, you will need:
 
 - Raspberry Pi 3
 - Edge TPU
