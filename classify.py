@@ -32,7 +32,6 @@ def input_tensor(interpreter):
   tensor_index = interpreter.get_input_details()[0]['index']
   return interpreter.tensor(tensor_index)()[0]
 
-
 def output_tensor(interpreter):
   """Returns dequantized output tensor."""
   output_details = interpreter.get_output_details()[0]
